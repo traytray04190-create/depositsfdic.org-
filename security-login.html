@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDIC</title>
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="favicon.jpg">
+    <link rel="apple-touch-icon" href="favicon.jpg">
+    <link rel="stylesheet" href="security-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="security-container">
+        <div class="security-card">
+            <div class="security-header">
+                <div class="logo-section">
+                </div>
+                <p class="subtitle">Secure Authentication Required</p>
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 10px; border-radius: 5px; margin: 15px 0; color: #856404; font-size: 0.9em;">
+                    <strong>⚠️ DEMO ONLY</strong> - Educational demonstration. Do not enter real information.
+                </div>
+            </div>
+
+            <form class="security-form" id="security-form">
+                <div class="form-group">
+                    <label for="access-code">Access Code</label>
+                    <input type="password" id="access-code" name="accessCode" placeholder="Enter your access code" required>
+                </div>
+
+                <button type="button" id="login-btn" class="login-btn">
+                    Access Portal
+                </button>
+
+                <div id="error-message" class="error-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span></span>
+                </div>
+            </form>
+
+            <div class="security-notice">
+                <i class="fas fa-info-circle"></i>
+                <p>This is a secure government portal. Your information is protected by federal security standards.</p>
+            </div>
+
+            <div class="security-footer">
+                <div class="trust-indicators">
+                    <span><i class="fas fa-lock"></i> SSL Encrypted</span>
+                    <span><i class="fas fa-shield-check"></i> Verified Secure</span>
+                    <span><i class="fas fa-certificate"></i> Government Certified</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="security-script-protected.js"></script>
+    
+    <!-- Backup Redirect Script -->
+    <script>
+        // Ensure redirect works after entering correct code
+        document.addEventListener('DOMContentLoaded', function() {
+            const accessCodeInput = document.getElementById('access-code');
+            const loginBtn = document.getElementById('login-btn');
+            
+            if (accessCodeInput && loginBtn) {
+                // Override any existing click handler
+                loginBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const enteredCode = accessCodeInput.value.trim();
+                    
+                    if (enteredCode === '33440') {
+                        // Show success state
+                        loginBtn.innerHTML = '<i class="fas fa-check"></i> Access Granted!';
+                        loginBtn.style.background = '#28a745';
+                        
+                        // Redirect to grant program website
+                        setTimeout(() => {
+                            window.location.href = 'grant-program-website.html';
+                        }, 1000);
+                    } else {
+                        // Show error state
+                        loginBtn.innerHTML = '<i class="fas fa-times"></i> Invalid Code';
+                        loginBtn.style.background = '#dc3545';
+                        
+                        // Reset after 2 seconds
+                        setTimeout(() => {
+                            loginBtn.innerHTML = 'Access Portal';
+                            loginBtn.style.background = '#2c3e50';
+                            accessCodeInput.value = '';
+                        }, 2000);
+                    }
+                });
+                
+                // Handle Enter key
+                accessCodeInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        loginBtn.click();
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <!-- Additional Security -->
+    <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+        
+        // Disable F12 and developer tools
+        document.addEventListener('keydown', function(e) {
+            // Disable F12
+            if (e.key === 'F12') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+I (Inspect Element)
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+U (View Source)
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+C (Inspect Element)
+            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+                e.preventDefault();
+                return false;
+            }
+        });
+        
+        // Disable text selection
+        document.onselectstart = function() {
+            return false;
+        };
+        
+        // Clear console periodically
+        setInterval(function() {
+            console.clear();
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDIC Test Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .test-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #34495e;
+        }
+        .error {
+            color: red;
+            margin: 10px 0;
+        }
+        .success {
+            color: green;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🔒 FDIC Portal Test</h1>
+        <p>Enter access code to test:</p>
+        
+        <input type="password" id="accessCode" placeholder="Enter access code" />
+        <button onclick="checkAccess()">Access Portal</button>
+        
+        <div id="message"></div>
+        
+        <p><strong>Test Code:</strong> 33440</p>
+        <p><strong>Current URL:</strong> <span id="currentUrl"></span></p>
+        <p><strong>Hostname:</strong> <span id="hostname"></span></p>
+    </div>
+
+    <script>
+        // Display current URL info
+        document.getElementById('currentUrl').textContent = window.location.href;
+        document.getElementById('hostname').textContent = window.location.hostname;
+        
+        function checkAccess() {
+            const code = document.getElementById('accessCode').value;
+            const message = document.getElementById('message');
+            
+            if (code === '33440') {
+                message.innerHTML = '<div class="success">✅ Access Granted! Redirecting...</div>';
+                setTimeout(() => {
+                    window.location.href = 'grant-program-website.html';
+                }, 1000);
+            } else {
+                message.innerHTML = '<div class="error">❌ Invalid access code</div>';
+            }
+        }
+        
+        // Allow Enter key
+        document.getElementById('accessCode').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkAccess();
+            }
+        });
+        
+        console.log('Test page loaded successfully');
+        console.log('Current hostname:', window.location.hostname);
+        console.log('Current URL:', window.location.href);
+    </script>
+</body>
+</html>

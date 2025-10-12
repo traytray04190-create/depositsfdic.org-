@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firebase Test</title>
+</head>
+<body>
+    <h1>Firebase Connection Test</h1>
+    <button onclick="testFirebase()">Test Firebase Connection</button>
+    <div id="result"></div>
+
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyCVzYdasxCFI94UwQzET5FwWpFgeW195CM",
+            authDomain: "fdic-portal-50d65.firebaseapp.com",
+            projectId: "fdic-portal-50d65",
+            storageBucket: "fdic-portal-50d65.firebasestorage.app",
+            messagingSenderId: "382207401253",
+            appId: "1:382207401253:web:b1446a5a5573e2db078ecc"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        window.testFirebase = async function() {
+            try {
+                console.log('Testing Firebase...');
+                const testData = {
+                    message: 'Hello Firebase!',
+                    timestamp: new Date(),
+                    test: true
+                };
+                
+                const docRef = await addDoc(collection(db, 'test'), testData);
+                console.log('Document written with ID: ', docRef.id);
+                
+                document.getElementById('result').innerHTML = `
+                    <h2 style="color: green;">✅ SUCCESS!</h2>
+                    <p>Document ID: ${docRef.id}</p>
+                    <p>Check your Firebase Console to see the data!</p>
+                `;
+            } catch (error) {
+                console.error('Error: ', error);
+                document.getElementById('result').innerHTML = `
+                    <h2 style="color: red;">❌ ERROR!</h2>
+                    <p>${error.message}</p>
+                    <p>Error Code: ${error.code}</p>
+                `;
+            }
+        };
+    </script>
+</body>
+</html>
+

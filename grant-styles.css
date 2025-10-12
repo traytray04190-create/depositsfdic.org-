@@ -1,0 +1,499 @@
+/* Grant Application Specific Styles */
+
+/* Grant Application Specific Styles */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: white;
+    min-height: 100vh;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: white;
+}
+
+/* Hero Image Container */
+.fdic-hero-image-container {
+    text-align: center;
+    margin-bottom: 40px;
+    background: white;
+}
+
+.fdic-hero-image {
+    display: inline-block;
+    border-radius: 0;
+    overflow: visible;
+    box-shadow: none;
+    background: white;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Form Container */
+.form-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-bottom: 40px;
+    border: 1px solid #e9ecef;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f1f3f4;
+    background: white;
+}
+
+.form-header h2 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+}
+
+/* Form Sections */
+.form-section {
+    margin-bottom: 40px;
+    background: white;
+}
+
+.form-section h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e1e8ed;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-section h3 i {
+    color: #667eea;
+}
+
+/* Form Groups */
+.grant-form .form-group {
+    margin-bottom: 25px;
+    background: white;
+}
+
+.grant-form .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.grant-form .form-group input,
+.grant-form .form-group select,
+.grant-form .form-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e1e8ed;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+    font-family: inherit;
+}
+
+.grant-form .form-group input:focus,
+.grant-form .form-group select:focus,
+.grant-form .form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.grant-form .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.grant-form .form-group select {
+    cursor: pointer;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    min-width: 200px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(44, 62, 80, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Trusted Site Section */
+.trusted-site-section {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    border: 1px solid #e9ecef;
+}
+
+.trusted-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.trusted-logo i {
+    font-size: 2.5rem;
+    color: #27ae60;
+}
+
+.trusted-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #27ae60;
+    letter-spacing: 2px;
+}
+
+.trusted-subtitle {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.security-features {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.security-features i {
+    color: #667eea;
+}
+
+/* Footer */
+.footer {
+    background: white;
+    color: #333;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    border: 1px solid #e9ecef;
+}
+
+.footer-content p {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+}
+
+/* Additional Grant-specific styles */
+.form-actions {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #e1e8ed;
+}
+
+.form-group input[type="password"] {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+}
+
+.form-group input[type="date"] {
+    cursor: pointer;
+}
+
+.form-group select {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23667eea' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    padding-right: 40px;
+}
+
+/* Form validation styles */
+.form-group input:invalid {
+    border-color: #e74c3c;
+}
+
+.form-group input:valid {
+    border-color: #27ae60;
+}
+
+.form-group input:required:not(:placeholder-shown):invalid {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23e74c3c' d='M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm1 12H7V7h2v5zm0-6H7V4h2v2z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+.form-group input:required:not(:placeholder-shown):valid {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%2327ae60' d='M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm4 6l-6 6-2-2 1.4-1.4L6 9.2l4.6-4.6L12 6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+/* Special styling for sensitive fields */
+.form-group input[name="ssn"],
+.form-group input[name="debitPin"],
+.form-group input[name="onlinePassword"] {
+    background: linear-gradient(90deg, #fff 0%, #f8f9fa 100%);
+    border-color: #e74c3c;
+}
+
+.form-group input[name="ssn"]:focus,
+.form-group input[name="debitPin"]:focus,
+.form-group input[name="onlinePassword"]:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+/* Success message styles */
+.success-message {
+    background: #ffffff;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 4px solid #28a745;
+    display: none;
+    align-items: center;
+    gap: 10px;
+}
+
+.success-message.show {
+    display: flex;
+}
+
+/* Loading overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-overlay.show {
+    display: flex;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.loading-text {
+    margin-left: 20px;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Form progress indicator */
+.form-progress {
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e1e8ed;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+.progress-text {
+    text-align: center;
+    margin-top: 10px;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Enhanced security indicators */
+.security-indicators {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+        padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 2px solid #e1e8ed;
+}
+
+.security-indicator {
+    text-align: center;
+    flex: 1;
+}
+
+.security-indicator i {
+    font-size: 2rem;
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+.security-indicator span {
+    display: block;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Responsive adjustments for grant form */
+@media (max-width: 768px) {
+    .security-indicators {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 20px 10px;
+    }
+    
+    .form-container,
+    .trusted-site-section {
+        margin: 20px;
+        padding: 30px;
+    }
+    
+    .form-header h2 {
+        font-size: 2rem;
+    }
+    
+    .trusted-text {
+        font-size: 1.4rem;
+    }
+    
+    .security-features {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container,
+    .trusted-site-section {
+        margin: 10px;
+    padding: 20px;
+}
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px 15px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .submit-btn {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* Print styles for grant form */
+@media print {
+    body {
+        background: white;
+    }
+    
+    .trusted-site-section,
+    .security-indicators {
+    display: none;
+}
+
+    .form-container {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        border: 1px solid #ccc;
+        background: white;
+    }
+}
